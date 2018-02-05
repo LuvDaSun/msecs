@@ -1,0 +1,23 @@
+{
+  "name": "msecs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./node/main.js",
+  "module": "./module/main.js",
+  "types": "./types/main.d.ts",
+  "scripts": {
+    "prepare": "npm run compile",
+    "compile": "tsc; tsc --project tsconfig.module.json",
+    "clean": "rm -rf node types module",
+    "lint": "tslint \"src/**/*.ts\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
