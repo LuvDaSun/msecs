@@ -9,7 +9,7 @@ This "library" provides the following constants:
  - week = 7 * day;
 
 So you can do things like
-```
+```javascript
 import {day, week} from "msecs";
 
 const now = new Date();
