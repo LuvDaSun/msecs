@@ -8,12 +8,12 @@ This "library" provides the following constants:
  - day = 24 * hour;
  - week = 7 * day;
 
-So you can do things like
+So you can easy to read math on your dates!
 ```javascript
 import {day, week} from "msecs";
 
 const now = new Date();
 const tomorrow = new Date(now + day);
-const midnight = new Date(Math.floor(now / day) + 1 * day);
 const inTwoWeeks = new Date(now + 2 * week);
+const midnight = new Date(now - now % day + 1 * day);
 ```

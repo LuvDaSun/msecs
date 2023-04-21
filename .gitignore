@@ -1,6 +1,9 @@
 .*
-*.log
+
 /node_modules/
-/node/
-/module/
-/types/
+/out/
+
+!.gitignore
+!.npmrc
+
+!.vscode/

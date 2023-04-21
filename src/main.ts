@@ -1,1 +1,1 @@
-export * from "./msecs";
+export * from "./msecs.js";
