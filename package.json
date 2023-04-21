@@ -12,7 +12,6 @@
     "prepare": "npm run tsc",
     "clean": "rm -rf out",
     "test": "npm run spec-all",
-    "lint": "eslint \"src/**/*.ts\"",
     "spec-all": "node --test ./out/**.spec.js",
     "tsc": "tsc",
     "tsc-watch": "npm run tsc -- --watch"
