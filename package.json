@@ -1,6 +1,6 @@
 {
   "name": "msecs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "packageManager": "npm@10.5.0",
   "sideEffects": false,
   "type": "module",
