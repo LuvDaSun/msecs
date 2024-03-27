@@ -9,7 +9,7 @@ This "library" provides the following constants:
 - day = 24 \* hour;
 - week = 7 \* day;
 
-So you can easy to read math on your dates!
+So you can do easy to read math on your dates!
 
 ```javascript
 import { day, week } from "msecs";
