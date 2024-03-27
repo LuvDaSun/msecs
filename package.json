@@ -1,25 +1,51 @@
 {
   "name": "msecs",
-  "version": "0.0.0",
+  "version": "1.0.3",
+  "packageManager": "npm@10.5.0",
   "sideEffects": false,
   "type": "module",
-  "main": "out/main.js",
-  "types": "out/main.d.ts",
+  "main": "./bundled/main.cjs",
+  "module": "./bundles/main.js",
+  "types": "./types/main.d.ts",
+  "browser": "./bundles/browser.js",
+  "exports": {
+    ".": {
+      "require": "./bundled/main.cjs",
+      "import": "./bundled/main.js",
+      "types": "./types/main.d.ts",
+      "browser": "./bundled/browser.js"
+    }
+  },
   "files": [
-    "out/*"
+    "./types/**",
+    "./bundled/**"
   ],
   "scripts": {
-    "prepare": "npm run tsc",
-    "clean": "rm -rf out",
-    "test": "npm run spec-all",
-    "spec-all": "node --test ./out/**.spec.js",
-    "tsc": "tsc",
-    "tsc-watch": "npm run tsc -- --watch"
+    "prepack": "node ./scripts/build.js",
+    "pretest": "tsc",
+    "build": "node ./scripts/build.js",
+    "clean": "node ./scripts/clean.js",
+    "test": "node --test ./transpiled/**/*.test.js",
+    "spelling": "cspell",
+    "formatting": "prettier --check *"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LuvDaSun/msecs"
   },
   "author": "LuvDaSun Software B.V.",
   "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.30"
+  },
   "devDependencies": {
-    "@types/node": "^18.15.13",
-    "typescript": "^5.0.4"
+    "@tsconfig/node20": "^20.1.4",
+    "rollup": "^4.13.1",
+    "typescript": "^5.4.3",
+    "cspell": "^8.6.1",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
