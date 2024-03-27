@@ -25,7 +25,9 @@
     "pretest": "tsc",
     "build": "node ./scripts/build.js",
     "clean": "node ./scripts/clean.js",
-    "test": "node --test ./transpiled/**/*.test.js"
+    "test": "node --test ./transpiled/**/*.test.js",
+    "spelling": "cspell",
+    "formatting": "prettier --check *"
   },
   "repository": {
     "type": "git",
