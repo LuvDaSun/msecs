@@ -1,10 +1,18 @@
 .*
 
-/node_modules/
-/out/
+*.tsbuildinfo
 
 !.gitignore
+!.prettierignore
+!.editorconfig
 !.npmrc
+
+node_modules/
+transpiled/
+types/
+bundled/
+coverage/
 
 !.vscode/
 !.github/
+
